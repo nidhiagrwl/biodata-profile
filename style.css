@@ -674,18 +674,21 @@ footer {
         print-color-adjust: exact !important;
         margin: 0 !important;
         padding: 0 !important;
-        width: 100%;
-        height: auto;
+        width: 210mm;
+        height: 297mm;
+        overflow: hidden !important;
     }
     .container {
         padding: 10mm 15mm; 
-        max-width: 100%;
-        height: auto;
+        width: 210mm;
+        height: 296mm;
+        margin: 0 !important;
         display: flex;
         flex-direction: column;
         box-sizing: border-box;
         position: relative;
         z-index: 2;
+        overflow: hidden !important;
     }
     .top-controls, .theme-switch-wrapper, footer {
         display: none !important;
