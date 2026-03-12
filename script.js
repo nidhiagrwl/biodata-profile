@@ -23,19 +23,13 @@ function switchTheme(e) {
 
 toggleSwitch.addEventListener('change', switchTheme, false);
 
-// Share on WhatsApp
-function shareOnWhatsApp() {
-    let pageUrl = window.location.href;
-    
-    // Fallback if the user is testing locally (file:// URLs are not clickable on WhatsApp)
-    if (pageUrl.startsWith('file://')) {
-        pageUrl = "https://[Your-Deployed-Website-Link-Will-Go-Here].com";
-    }
-    
-    const text = "Hello,\nSharing my biodata profile for marriage consideration.\n\n" + pageUrl;
+// Contact Parent via WhatsApp
+function contactParent() {
+    const phoneNumber = "919424202977"; // Country code followed by 10-digit number
+    const text = "Hello, I am reaching out regarding Nidhi's biodata profile.";
     
     // api.whatsapp.com universally handles opening the app on mobile or web on desktop
-    window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
+    window.open(`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(text)}`, '_blank');
 }
 
 // Copy Link
