@@ -665,7 +665,7 @@ footer {
 @media print {
     @page {
         size: A4;
-        margin: 0;
+        margin: 5mm;
     }
     html, body {
         background-color: var(--bg-color) !important;
@@ -674,105 +674,97 @@ footer {
         print-color-adjust: exact !important;
         margin: 0 !important;
         padding: 0 !important;
-        width: 210mm;
-        height: 297mm;
-        overflow: hidden !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
     }
     .container {
-        padding: 10mm 15mm; 
-        width: 210mm;
-        height: 296mm;
-        margin: 0 !important;
-        display: flex;
-        flex-direction: column;
+        padding: 5mm !important; 
+        max-width: 100% !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        display: block !important;
         box-sizing: border-box;
-        position: relative;
-        z-index: 2;
-        overflow: hidden !important;
+        overflow: visible !important;
     }
     .top-controls, .theme-switch-wrapper, footer {
         display: none !important;
     }
     .bg-shape {
-        position: absolute !important;
-        opacity: 0.6 !important;
-        animation: none !important;
+        display: none !important; /* Temporarily disabling animated shapes for cleaner mobile exports */
     }
     .hero {
-        margin-bottom: 0.5rem;
-        flex-shrink: 0;
+        margin-bottom: 20px !important;
+        text-align: center !important;
     }
     .name-title {
         background: none !important;
         color: var(--text-primary) !important;
         -webkit-text-fill-color: var(--text-primary) !important;
-        font-size: 28pt !important;
+        font-size: 26pt !important;
         margin-bottom: 0px;
+        animation: none !important;
     }
     .subtitle {
         font-size: 14pt !important;
         margin-bottom: 0;
     }
     .divider { margin: 8px 0; }
+    
     .main-content {
-        display: flex;
-        flex-direction: row;
-        gap: 1.5rem;
-        flex: 1;
-        overflow: hidden;
-        align-items: stretch;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 20px !important;
+        flex-wrap: nowrap !important;
+        align-items: flex-start !important;
+        width: 100% !important;
     }
     .details-section {
-        flex: 1.4;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        height: 100%;
+        flex: 1.6 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
     }
     .photos-section {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        height: 100%;
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
     }
+    
     .glass-card {
         background-color: var(--card-bg) !important;
         border: 1px solid var(--card-border) !important;
-        box-shadow: var(--card-shadow) !important;
-        page-break-inside: avoid;
-        margin: 0;
-        padding: 0.8rem 1.2rem;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        box-shadow: none !important;
+        margin: 0 !important;
+        padding: 15px !important;
+        border-radius: 12px !important;
+        display: block !important;
+        page-break-inside: avoid !important;
+        transform: none !important;
     }
     .card-header {
-        margin-bottom: 0.6rem;
-        padding-bottom: 0.4rem;
-        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px !important;
+        padding-bottom: 5px !important;
+        border-bottom: 1px solid rgba(0,0,0,0.1) !important;
     }
-    .card-header h2 { font-size: 14pt; margin: 0; }
-    .card-header i { font-size: 14pt; }
+    .card-header h2 { font-size: 14pt !important; margin: 0 !important; }
+    .card-header i { font-size: 14pt !important; margin-right: 8px !important; }
+    
     .card-body {
-        gap: 0.5rem 1rem;
-        row-gap: 0.8rem;
-        grid-template-columns: 1fr 1fr;
+        display: grid !important;
+        gap: 10px 15px !important;
+        grid-template-columns: 1fr 1fr !important;
     }
     
-    .mt-6 {
-        margin-top: 1rem !important;
-    }
-    
-    /* Crucial fix: Distributed padding safely without taking up too much height */
     .detail-item {
-        padding: 0.15rem 0 !important;
-        gap: 0.2rem !important;
+        padding: 0 !important;
+        gap: 2px !important;
     }
     
-    .detail-item .label { font-size: 8pt; margin-bottom: 2px; color: #555 !important; }
-    .detail-item .value { font-size: 10pt; line-height: 1.2; }
+    .detail-item .label { font-size: 8pt !important; margin-bottom: 0px !important; color: #555 !important; font-weight: bold !important; }
+    .detail-item .value { font-size: 10pt !important; line-height: 1.2 !important; }
     
     .details-section, .photos-section {
         opacity: 1 !important;
@@ -782,24 +774,33 @@ footer {
     .glass-card::before {
         display: none !important;
     }
+    
     .photo-wrapper {
-        flex: 1;
+        width: 100% !important;
+        height: auto !important;
+        border: 1px solid #ddd !important;
+        border-radius: 12px !important;
         box-shadow: none !important;
-        border: 1px solid #ddd;
-        border-radius: 12px;
-        min-height: 0;
-        animation: none !important;
+        page-break-inside: avoid !important;
         transform: none !important;
+        animation: none !important;
+        min-height: 250px !important;
+        display: block !important;
+        overflow: hidden !important;
+        position: relative !important;
     }
     .photo-wrapper img {
-        box-shadow: none !important;
-        border-radius: 12px;
-        position: static;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        animation: none !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important; /* Contain instead of cover guarantees visibility */
+        display: block !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
         transform: none !important;
+        animation: none !important;
+        filter: none !important;
+        box-shadow: none !important;
     }
-    .value-group { gap: 0.8rem; flex-wrap: nowrap; }
+    .value-group { gap: 8px !important; flex-wrap: nowrap !important; }
 }

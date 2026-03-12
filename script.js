@@ -8,17 +8,31 @@ if (currentTheme) {
     if (currentTheme === 'dark') {
         toggleSwitch.checked = true;
     }
+    updatePDFLink(currentTheme);
+} else {
+    updatePDFLink('light');
+}
+
+// Update PDF link dynamically
+function updatePDFLink(theme) {
+    const pdfLink = document.getElementById('pdf-download-link');
+    if (pdfLink) {
+        if (theme === 'dark') {
+            pdfLink.href = 'biodata-dark.pdf';
+            pdfLink.download = 'Nidhi_Agrawal_Biodata_Dark.pdf';
+        } else {
+            pdfLink.href = 'biodata.pdf';
+            pdfLink.download = 'Nidhi_Agrawal_Biodata.pdf';
+        }
+    }
 }
 
 // Function to switch themes
 function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-    } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-    }    
+    const theme = e.target.checked ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    updatePDFLink(theme);
 }
 
 toggleSwitch.addEventListener('change', switchTheme, false);
