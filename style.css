@@ -509,7 +509,7 @@ footer {
 }
 
 /* Responsive Layout */
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
     .top-controls {
         flex-direction: column;
         align-items: center;
@@ -550,7 +550,7 @@ footer {
     .mt-4 { margin-top: 0; }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .container {
         padding: 1.5rem 1.2rem;
     }
