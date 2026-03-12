@@ -672,24 +672,20 @@ footer {
         color: var(--text-primary) !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
-        height: 100vh;
-        max-height: 296mm; /* Strictly block 2nd blank page bleeding */
-        width: 100vw;
-        overflow: hidden !important; /* Force crop empty space */
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100%;
+        height: auto;
     }
     .container {
-        padding: 1cm 1.5cm; /* Slight padding reduction to prevent wrapping overflow */
+        padding: 10mm 15mm; 
         max-width: 100%;
-        max-height: 295mm; /* Fix extra page bleed */
+        height: auto;
         display: flex;
         flex-direction: column;
         box-sizing: border-box;
         position: relative;
         z-index: 2;
-        overflow: hidden !important;
     }
     .top-controls, .theme-switch-wrapper, footer {
         display: none !important;
