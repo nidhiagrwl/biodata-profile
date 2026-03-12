@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nidhi Agrawal – Biodata</title>
+    <link rel="stylesheet" href="style.css?v=fresh">
+
+    <!-- Modern Elegant Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="top-controls">
+        <div class="action-buttons">
+            <button class="btn btn-whatsapp" onclick="shareOnWhatsApp()" title="Share on WhatsApp">
+                <i class="fab fa-whatsapp"></i> <span class="btn-text">WhatsApp</span>
+            </button>
+            <button class="btn btn-copy" onclick="copyLink()" title="Copy Link">
+                <i class="fas fa-link"></i> <span class="btn-text">Copy Link</span>
+            </button>
+            <button class="btn btn-download" onclick="downloadPDF()" title="Download PDF">
+                <i class="fas fa-download"></i> <span class="btn-text">PDF</span>
+            </button>
+        </div>
+
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <!-- Background Elements for Glassmorphism -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+    <div class="bg-shape shape-4 mobile-only"></div>
+    <div class="bg-shape shape-5 mobile-only"></div>
+
+    <div class="container" id="biodata-content">
+        <header class="hero slide-down">
+            <h1 class="name-title">Nidhi Agrawal</h1>
+            <p class="subtitle">Marriage Biodata Profile</p>
+            <div class="divider">
+                <span class="diamond"></span>
+                <div class="line"></div>
+                <span class="diamond"></span>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- Details Section (Left on Desktop, Bottom on Mobile) -->
+            <div class="details-section slide-right">
+
+                <div class="glass-card" tabindex="0">
+                    <div class="card-header">
+                        <i class="fa-regular fa-user"></i>
+                        <h2>Personal Details</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="detail-item">
+                            <span class="label">Name</span>
+                            <span class="value">Nidhi Agrawal</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Date of Birth</span>
+                            <span class="value">27 April 1994</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Birth Time</span>
+                            <span class="value">01:30 PM</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Birth Place</span>
+                            <span class="value">Raipur, Chhattisgarh</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Native Place</span>
+                            <span class="value">Badnagar, Rajasthan</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Height</span>
+                            <span class="value">5' 2"</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Education</span>
+                            <span class="value">B.E in Electronics & Telecommunication</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Occupation</span>
+                            <span class="value">Software Engineer</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Hobbies</span>
+                            <span class="value">Coding, Traveling, Dancing</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Gotra</span>
+                            <span class="value">Garg</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Complexion</span>
+                            <span class="value">Wheatish</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card mt-6" tabindex="0">
+                    <div class="card-header">
+                        <i class="fa-solid fa-users"></i>
+                        <h2>Family Details</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="detail-item">
+                            <span class="label">Father's Name</span>
+                            <span class="value">Mr. Vinod Kumar Agrawal</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Father's Occupation</span>
+                            <span class="value">Businessman (Contractor)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Mother's Name</span>
+                            <span class="value">Mrs. Padma Agrawal</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Mother's Occupation</span>
+                            <span class="value">Homemaker</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Siblings</span>
+                            <span class="value">1 Younger Brother, 1 Younger Sister</span>
+                        </div>
+                        <div class="detail-item full-width">
+                            <span class="label">Family Background</span>
+                            <span class="value">Respectable, middle-class nuclear family with traditional values and
+                                modern outlook.</span>
+                        </div>
+                        <div class="detail-item full-width">
+                            <span class="label">Address</span>
+                            <span class="value">Devendra Nagar, Raipur</span>
+                        </div>
+                        <div class="detail-item full-width contact-info">
+                            <span class="label">Contact</span>
+                            <div class="value-group">
+                                <span class="value"><i class="fas fa-phone-alt"></i> +91 94255 02977</span>
+                                <span class="value"><i class="fas fa-phone-alt"></i> +91 94242 02977</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Photos Section (Right on Desktop, Top on Mobile) -->
+            <div class="photos-section slide-left">
+                <div class="photo-wrapper">
+                    <img src="photo1.jpeg" alt="Nidhi Agrawal Profile 1">
+                </div>
+                <div class="photo-wrapper">
+                    <img src="photo2.jpeg" alt="Nidhi Agrawal Profile 2">
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Designed & Developed by Nidhi Agrawal</p>
+        </footer>
+    </div>
+
+    <!-- Script for interactivity -->
+    <script src="script.js?v=fresh"></script>
+</body>
+
+</html>

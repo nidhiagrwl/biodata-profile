@@ -1,0 +1,11 @@
+{
+  "name": "biodata-profile",
+  "version": "1.0.0",
+  "description": "A premium deployable personal biodata website",
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}
